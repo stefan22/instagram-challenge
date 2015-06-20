@@ -1,4 +1,4 @@
->#Instagram _Challenge_
+#Instagram _Challenge_
 
 
 Instructions
