@@ -2,12 +2,13 @@
   <% if @pictures.any? %>
     <% @pictures.each do |picture| %>
       <h2><%= link_to picture.name, picture_path(picture) %></h2>
+      <h5><%= link_to "Edit #{picture.name}", edit_picture_path(picture) %></h5>
     <% end %>
   <% else %>
   <p>No pictures have been added yet</p>
   <% end %>
-
-  <a href="pictures/new">Add a picture</a>
+  <br/>
+  <a class="addpic" href="pictures/new">Add a picture</a>
 
 
 </section>

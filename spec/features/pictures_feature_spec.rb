@@ -39,9 +39,23 @@ feature 'pictures' do
         click_link 'pic1'
         expect(page).to have_content 'pic1'
         expect(current_path).to eq "/pictures/#{pic1.id}"
-
     end
   end
+
+  context 'editing pictures' do
+    before {Picture.create(name:'pic1')}
+
+    scenario 'let a user make changes to pictures' do
+      visit '/pictures'
+      click_link 'Edit pic1'
+      fill_in 'Name', with: 'pic2'
+      click_button 'Update Picture'
+      expect(page).to have_content 'pic2'
+      expect(current_path).to eq '/pictures'
+    end
+  end
+
+
 
 
 end
