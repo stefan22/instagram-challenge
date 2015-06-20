@@ -1,5 +1,5 @@
 #Instagram Challenge
-===================
+
 
 Instructions
 -------
