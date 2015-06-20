@@ -1,5 +1,16 @@
 #Instagram _Challenge_
 
+Setup
+-----
+* gem install rails
+* rails new name -d postgresql -T
+* bin/rails s
+* bin/rake db:create
+* add gem 'rspec-rails'
+* add gem 'capybara'
+* run bundle
+* bin/rails g rspec:install
+* require capybara/rails in spec/rails helper
 
 Instructions
 -------
