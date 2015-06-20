@@ -1,13 +1,13 @@
 <section id="main">
   <% if @pictures.any? %>
     <% @pictures.each do |picture| %>
-      <h2><%= picture.name %></h2>
+      <h2><%= link_to picture.name, picture_path(picture) %></h2>
     <% end %>
   <% else %>
   <p>No pictures have been added yet</p>
   <% end %>
 
-  <a href="#">Add a picture</a>
+  <a href="pictures/new">Add a picture</a>
 
 
 </section>
