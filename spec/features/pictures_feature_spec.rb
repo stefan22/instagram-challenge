@@ -55,6 +55,16 @@ feature 'pictures' do
     end
   end
 
+  context 'deleting pictures' do
+    before {Picture.create(name:'pic1')}
+
+    scenario 'removes a picture when user clicks delete link' do
+        visit '/pictures'
+        click_link 'Delete pic1'
+        expect(page).not_to have_content 'pic1'
+        expect(page).to have_content 'Picture deleted successfully'
+    end
+  end
 
 
 
