@@ -2,8 +2,11 @@
   <% if @pictures.any? %>
     <% @pictures.each do |picture| %>
       <h2><%= link_to picture.name, picture_path(picture) %></h2>
-      <h5><%= link_to "Edit #{picture.name}", edit_picture_path(picture) %></h5>
-      <h5><%= link_to "Delete #{picture.name}", picture_path(picture), method: :delete %></h5>
+        <ul>
+          <li><%= link_to "Edit #{picture.name}", edit_picture_path(picture) %></li>
+          <li><%= link_to "Delete #{picture.name}", picture_path(picture), method: :delete %></li>
+          <li><%= link_to "Comment #{picture.name}", new_picture_comment_path(picture) %></li>
+        </ul>
     <% end %>
   <% else %>
   <p>No pictures have been added yet</p>
